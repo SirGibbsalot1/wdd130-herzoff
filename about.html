@@ -5,17 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <a href="index.html"><img class="logo" src="file-name" alt="logo-img"></a>
-        <img id="header-title-img" src="filename" alt="header-title-img">
+        <a href="index.html"><img id="home-header-logo" src="images/placeholder-logo.jpg" alt="logo-img"></a>
+        <img id="header-signature-img" src="images/naiya-title-img.png" alt="header-title-img">
 
         <nav class="header-nav">
             <a href="index.html">Home</a>
             <a href="gallery.html">Gallery</a>
             <a href="about.html">About</a>
-            <a href="https://www.instagram.com/naiya_herzoff?utm_source=ig_web_button_share_sheet"><img src="images/instaicon2.png" class="custom-insta-logo" alt="insta-logo-img">Instagram</a>
+            <a class="insta-link" href="https://www.instagram.com/naiya_herzoff?utm_source=ig_web_button_share_sheet" target="_blank">
+                <p>@naiya's_alter_ego04</p>
+                <img src="images/instaicon2.png" class="custom-insta-logo" alt="insta-logo-img">
+            </a>
         </nav>
         
     </header>
@@ -36,20 +42,25 @@
             <img src="images/adult_naiya.jpeg" alt="naiya-adult-img">
         </div>
         
-        <img src="images/child_naiya_01.jpeg" alt="naiya-painting-img">
-        <img src="images/child_naiya_02.jpeg" alt="naiya-crafting-img">
-
+        <div id="child-imgs">
+            <img src="images/child_naiya_01.jpeg" alt="naiya-painting-img">
+            <img src="images/child_naiya_02.jpeg" alt="naiya-crafting-img">
+        </div>
 
     </main>
 
     <footer>
-        <nav class="footer-nav">
-            <img src="file-name" class="naiya-signature-img" alt="naiya-signature-img">
+       <img id="footer-signature-img" src="images/naiya-title-img.png"  alt="naiya-signature-img">
+        <nav id="footer-nav">
             <p>Contact:</p>
-            <a href="email"><img src="file-name" class="email-img" alt="email-img"></a>
-            <a href="https://www.instagram.com/naiya_herzoff?utm_source=ig_web_button_share_sheet"><img src="images/instaicon2.png" class="custom-insta-logo" alt="insta-logo">Instagram</a>
-            <a href="index.html"><img src="file-name" class="logo" alt="logo-img" ></a>
+            <a id="footer-email-link" href="email">
+                <img src="images/emailicon2.png" class="email-img" alt="email-img">
+            </a>
+            <a id="footer-insta-link" href="https://www.instagram.com/naiya_herzoff?utm_source=ig_web_button_share_sheet">
+                <img id="footer-insta-img" src="images/instaicon2.png" class="custom-insta-logo" alt="insta-logo">
+            </a>
         </nav>
+        <img id="footer-icon" src="images/bottomicondragonfly.png" alt="dragonfly-footer-icon">
     </footer>
 </body>
 </html>

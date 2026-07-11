@@ -1,10 +1,216 @@
-header {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1.5fr .5fr 1fr;
+/* header styling */
+body {
+    font-family: "Forum", serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #EFEDE7;
+    margin: 0;
+    padding: 0;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-header nav{
+header {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1.5fr 1fr;
+    max-height: 200px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#home-header-logo {
+    max-width: auto;
+    height: 150px;
+}
+
+.header-nav{
+    background-color: #4C3C2F;
+    color: white;
+    grid-row: 2;
+    grid-column: 1/5;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: solid 2px black;
+    border-bottom: 2px black solid;
+}
+
+.header-nav a {
+    display: flex;
+    text-decoration: none;
+    color: white;
+    justify-self: center;
+    align-self: center;
+}
+
+.header-nav a:hover{
+    background-color: #DAE3EE;
+    color: #4C3C2F;
+}
+
+#header-signature-img{
+    grid-column: 4/5;
+    max-width: 200px;
+    height: auto;
+    justify-self: left;
+    align-self: center;
+}
+
+.custom-insta-logo{
+ max-height: 35px;
+ width: auto;
+ align-self: center;
+}
+
+/* homepage styling */
+
+#home-header-img{
+    display: block;
+    max-height: 75px;
+    width: 100%;
+    object-fit: cover;
+    border-bottom: solid 2px black;
+    border-top: 2px black solid;
+}
+
+main {
+    justify-items: center;
+    margin: 0;
+}
+
+#gallery-button{
+    display: flex;
+    column-gap: 5px;
+    max-width: 290px;
+    align-items: center;
+}
+
+
+#home-imgs-card {
+    display: grid;
+    /* 1. Mobile First: Items take full width and stack vertically */
+    grid-template-columns: 1fr; 
+    row-gap: 20px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#home-imgs-card div{
+    justify-self: center;
+    justify-items: center;
+}
+
+
+#home-imgs-card img{
+  width: 200px;
+  height: 300px;
+  max-width: 200px;
+  object-fit: cover;
+}
+
+#home-footer-img {
+    display: block;
+    max-height: 75px;
+    width: 100%;
+    object-fit: cover;
+    border-top: solid 2px black;
+    margin: 0;
+}
+footer {
+    max-height: 150px;
+    width: 100%;
+    background-color: #4C3C2F;
+    display: grid;
+    grid-template-columns: .25fr 1.25fr .25fr;
+    grid-template-rows: 1fr;
+    border-bottom: solid 2px black;
+    border-top: solid 2px black;
+}
+
+#footer-signature-img {
+    display: block;
+    width: 200px;
+    height: auto;
+}
+
+#footer-icon {
+    max-width: 40px;
+    height: auto;
+    align-self: center;
+    justify-self: center;
+    display: block;
+}
+
+#footer-nav{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-self: center;
+    justify-self: center;
+}
+
+#footer-nav a{
+    text-decoration: none;
+    color: white;
+}
+
+#footer-nav a:hover{
+    background-color: rgba(240, 248, 255, 0.144);
+}
+
+footer p{
+    margin: 6px 8px 0 10px;
+}
+.email-img{
+    max-width: 60px;
+    height: auto;
+}
+#footer-email-link {
+    max-width: 60px;
+    max-height: 35px;
+}
+
+#footer-insta-link {
+    max-width: 35px;
+    max-height: 35px;
+}
+
+/* gallery styling */
+
+#gallery-card {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 8000;
+}
+
+#gallery-card img{
+    height: auto;
+    max-width: 200px;
+    margin: 20px;
+    border: solid black 2px;
+    align-self: center;
+}
+
+/* about page styling */
+
+#info-card {
+    display: flex;
+}
+
+#info-card img {
+    width: auto;
+    height: 400px;
+}
+
+
+/* I got the media query view from AI */
+/* 2. Desktop View: Applies when the screen is wide enough for all 3 columns */
+@media (min-width: 650px) {
+    #home-imgs-card {
+        grid-template-columns: repeat(3, 200px);
+        justify-content: space-between;
+        max-width: 680px;
+    }
 }
