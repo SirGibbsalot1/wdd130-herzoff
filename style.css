@@ -27,6 +27,15 @@ header {
     height: 150px;
 }
 
+#logo-link {
+    max-width: 150;
+    justify-self: left;
+}
+
+#logo-link:hover {
+    background-color: #dae3eea8;
+}
+
 .header-nav{
     background-color: #4C3C2F;
     color: white;
@@ -44,6 +53,10 @@ header {
     color: white;
     justify-self: center;
     align-self: center;
+
+    font-family: "Forum", italic;
+    font-weight: 400;
+    font-style: oblique 14deg;
 }
 
 .header-nav a:hover{
@@ -52,11 +65,12 @@ header {
 }
 
 #header-signature-img{
-    grid-column: 4/5;
-    max-width: 200px;
+    grid-column: 2/4;
+    max-width: 250px;
     height: auto;
-    justify-self: left;
+    justify-self: center;
     align-self: center;
+    object-fit: cover;
 }
 
 .custom-insta-logo{
@@ -78,7 +92,7 @@ header {
 
 main {
     justify-items: center;
-    margin: 0;
+    margin: 5px 0 0 0;
 }
 
 #gallery-button{
@@ -109,6 +123,10 @@ main {
   height: 300px;
   max-width: 200px;
   object-fit: cover;
+  border: #4C3C2F 2px solid;
+  border-radius: 10px;
+  justify-self: center;
+  overflow: hidden;
 }
 
 #home-footer-img {
@@ -117,8 +135,11 @@ main {
     width: 100%;
     object-fit: cover;
     border-top: solid 2px black;
-    margin: 0;
+    /* border-bottom: solid 2px black; */
+    margin: 0px;
 }
+
+/* footer styling  */
 footer {
     max-height: 150px;
     width: 100%;
@@ -132,16 +153,15 @@ footer {
 
 #footer-signature-img {
     display: block;
-    width: 200px;
-    height: auto;
+    max-height: 80px;
+    width: auto;
 }
 
 #footer-icon {
-    max-width: 40px;
+    max-width: 60px;
     height: auto;
     align-self: center;
     justify-self: center;
-    display: block;
 }
 
 #footer-nav{
@@ -149,6 +169,7 @@ footer {
     grid-template-columns: repeat(3, 1fr);
     align-self: center;
     justify-self: center;
+    color: white;
 }
 
 #footer-nav a{
@@ -180,9 +201,13 @@ footer p{
 /* gallery styling */
 
 #gallery-card {
+    /* 1. Mobile First: Items take full width and stack vertically */
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    max-width: 8000;
+    grid-template-columns: 1fr; 
+    row-gap: 20px;
+    width: 100%;
+    margin: 0 auto;
+    justify-items: center;
 }
 
 #gallery-card img{
@@ -191,17 +216,49 @@ footer p{
     margin: 20px;
     border: solid black 2px;
     align-self: center;
+    justify-self: center;
 }
 
 /* about page styling */
 
 #info-card {
+    margin: 20px 0 0 0;
+    padding: 15px;
     display: flex;
+    flex-direction: column-reverse;
+    max-width: 300px;
+    border: #4C3C2F 2px solid;
+    border-radius: 10px;
+    align-items: center;
+    overflow: hidden;
 }
 
 #info-card img {
     width: auto;
-    height: 400px;
+    max-height: 300px;
+    border: #4C3C2F 2px solid;
+    border-radius: 10px;
+    margin: 0 0 0 10px;
+    object-fit: cover;
+}
+
+#child-imgs {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0 20px 0;
+    max-width: 365px;
+    gap: 30px;
+
+}
+
+#child-imgs img{
+    max-width: 150px;
+    height: auto;
+    object-fit: cover;
+    border: #4C3C2F 2px solid;
+    border-radius: 10px;
+    justify-self: center;
+    overflow: hidden;
 }
 
 
@@ -212,5 +269,52 @@ footer p{
         grid-template-columns: repeat(3, 200px);
         justify-content: space-between;
         max-width: 680px;
+    }
+    #gallery-card {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 8000;
+        justify-items: center;
+        align-items: center;
+        }
+
+    #info-card {
+        display: flex;
+        flex-direction: row;
+        margin: 20px 0 0 0;
+        padding: 15px;
+        max-width: 700px;
+        border: #4C3C2F 2px solid;
+        border-radius: 10px;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    #info-card img {
+        width: auto;
+        max-height: 300px;
+        border: #4C3C2F 2px solid;
+        border-radius: 10px;
+        margin: 0 0 0 10px;
+        object-fit: cover;
+    }
+
+    #child-imgs {
+        margin: 20px 0 20px 0;
+        display: flex;
+        flex-direction: row;
+        max-width: 730px;
+        gap: 30px;
+
+    }
+
+    #child-imgs img{
+        max-width: 350px;
+        height: auto;
+        object-fit: cover;
+        border: #4C3C2F 2px solid;
+        border-radius: 10px;
+        justify-self: center;
+        overflow: hidden;
     }
 }
