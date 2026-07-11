@@ -23,12 +23,12 @@ header {
 }
 
 #home-header-logo {
-    max-width: auto;
-    height: 150px;
+    width: auto;
+    max-height: 150px;
 }
 
 #logo-link {
-    max-width: 150;
+    max-width: 150px;
     justify-self: left;
 }
 
@@ -95,12 +95,25 @@ main {
     margin: 5px 0 0 0;
 }
 
-#gallery-button{
+#gallery-nav {
     display: flex;
-    column-gap: 5px;
-    max-width: 290px;
-    align-items: center;
 }
+
+#gallery-button{
+    margin-left: 5px;
+  padding: 5px 5px;
+  border: #4C3C2F 2px solid;
+  color: black;
+  text-decoration: none;
+  border-radius: 4px;
+  align-self: center;
+}
+
+#gallery-button:hover{
+  padding: 10px 10px;
+  background-color: #4c3c2fa5;
+  color: aliceblue;
+  }
 
 
 #home-imgs-card {
@@ -273,7 +286,7 @@ footer p{
     #gallery-card {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        max-width: 8000;
+        max-width: 8000px;
         justify-items: center;
         align-items: center;
         }
